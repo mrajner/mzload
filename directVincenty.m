@@ -10,7 +10,7 @@ function [ fi2, la2, a12, a21 ] = directVincenty( fi1, la1, alpha12, s12, a, e2)
 %               (determined in start point), input as decimal degrees
 %   s12         geodesic length, input as metres
 %
-%   Wyniki dzia³ania funkcji zwracane jako stopnie dziesiêtne
+%   The function returns decimal degree
 %
 %   fi2         end point's latitude, output as decimal degrees
 %   la2         end point's longitude, output as decimal degrees
