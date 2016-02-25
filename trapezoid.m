@@ -3,14 +3,14 @@ function [ Area, H_hydro, dist ] = trapezoid( fi0, la0, Az1, Az2, s1, s2, a, e2,
 % trapezoid function is used to calculate properties of one spherical trapezoid
 % that influences hydrospheric loading
 %
-% fi0, la0      latitude and longitude of point for which defromation are calculated,
+% fi0, la0      latitude and longitude of point for which deformation are calculated,
 %               input as decimal degrees
 %
-% Az1, Az2      azimuths to left and right edges of spherical rapezoid,
+% Az1, Az2      azimuths to left and right edges of spherical trapezoid,
 %               input as decimal degrees
 %
 % s1, s2        distances to closer and further trapezoid bases,
-%               (intergation distances), input as metres
+%               (integration distances), input as metres
 %
 % a             radius of reference surface,
 %               input as metres
@@ -27,7 +27,7 @@ function [ Area, H_hydro, dist ] = trapezoid( fi0, la0, Az1, Az2, s1, s2, a, e2,
 % dist          distance to centre of spherical figure
 %
 
-%% calculation of figre's area
+%% calculation of figure's area
 
 % width of spherical trapezoid
 A = Az2-Az1;

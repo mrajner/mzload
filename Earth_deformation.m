@@ -12,7 +12,7 @@ function [ n, e, u ] = Earth_deformation( fi0, la0, green_fun, Hydrology_model )
 %                   to loading mass and Green's function coefficients describing
 %                   deformations in radial and tangential direction.
 %                   Values in 2nd and 3rd columns should contain normalized
-%                   values (their denrmalization, depending on spherical
+%                   values (their denormalization, depending on spherical
 %                   earth's radius is done at runtime).
 %                   Green's function coefficients for distances between the
 %                   distances in the first column of the table are calculated

@@ -1,6 +1,6 @@
 function [ y ] = rad2deg( x )
 %
-% rad2deg function convert's radian angle to decimal degrees
+% rad2deg function converts radian angle to decimal degrees
 %
 % x     input angle, input as radians
 %

@@ -8,7 +8,7 @@ function [ N ] = Np( fi, a, e2)
 %
 % a     radius of reference surface, input in metres
 %
-% e2    ecentricity of reference surface
+% e2    eccentricity of reference surface
 %
 % N     radius of first vertical,
 %       output as metres

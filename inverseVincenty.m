@@ -14,7 +14,7 @@ function [ s12, alpha12, alpha21 ] = inverseVincenty( fi1, la1, fi2, la2, a, e2 
 %   s12         geodesic length, output as metres
 %   alpha12     azimuth from start point to end point, determined at the location 
 %               of start point, output as decimal degrees
-%   alpha21     azimuth from end point to start point, deermined at the location
+%   alpha21     azimuth from end point to start point, determined at the location
 %               of end point, output as decimal degrees 
 %
 %

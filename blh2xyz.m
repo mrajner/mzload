@@ -1,13 +1,13 @@
 function [X, Y, Z] = blh2xyz(fi, la, h, a, e2)
 % 
 % function blh2xyz calculate geocentric coordinates based on geodetic
-% coordinates and parameters of reference elliposid
+% coordinates and parameters of reference ellipsoid
 %
 % fi        point's latitude, input as decimal degrees
 %
 % la        point's longitude, input as decimal degrees
 %
-% a         semi major axis of reference ellipsoid, imput in metres
+% a         semi major axis of reference ellipsoid, input in metres
 % 
 % e2        eccentricity of reference ellipsoid
 %

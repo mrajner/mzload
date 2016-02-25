@@ -16,10 +16,10 @@ function [ fi2, la2, a12, a21 ] = directVincenty( fi1, la1, alpha12, s12, a, e2)
 %   la2         end point's longitude, output as decimal degrees
 %   alpha12     azimuth from start to end point, determined at the location 
 %               of end point, output as decimal degrees
-%   alpha21     azimuth from end point to start point, deermined at the location
+%   alpha21     azimuth from end point to start point, determined at the location
 %               of end point, output as decimal degrees 
 %
-% Presented algorith is based on direct Vincenty method, to calculate 
+% Presented algorithm is based on direct Vincenty method, to calculate 
 % geodesic's end point for ellipsoid of revolution and was altered to
 % improve calculation speed for spherical Earth
 
