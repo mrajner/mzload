@@ -7,15 +7,15 @@ function [ H ] = hydro( Hydro_model, fi, la )
 %               (one month consists of 360 rows and 720 columns), with
 %               information of water quantity as equivalent of fresh
 %               water column with basis of 0.5 x 0.5 degrees and height
-%               expressed in milimetres.
-%               Data is expressed in milimeters.
+%               expressed in millimetres.
+%               Data is expressed in millimetres.
 %               No data is marked as NaN (Not a Number).
 %
 % fi, la        coordinates for water column height determination,
 %               input as decimal degrees
 %
 % water column height is determined by average sum of information 
-% stored in four adjacent hydrologic data cells
+% stored in four adjacent hydrosphere data cells
 
 %% Algorithm
 
@@ -38,7 +38,7 @@ Rcol = Rcol + grid_la';
 Urow = Urow';
 Lrow = Lrow';
 
-% returns index od elements adjacent to calculated deformations
+% returns index of elements adjacent to calculated deformations
 H_NE_idx = sub2ind(size(Hydro_model), Urow, Rcol);
 H_SE_idx = sub2ind(size(Hydro_model), Lrow, Rcol);
 H_SW_idx = sub2ind(size(Hydro_model), Lrow, Lcol);
@@ -53,7 +53,7 @@ H_NW = Hydro_model(H_NW_idx);
 [x] = [H_NE, H_SE, H_SW, H_NW]';
 
 % calculate average height of water column,
-% sum and divisiun skip Not a Number (NaN)
+% sum and division skip Not a Number (NaN)
 %[H] = nansum(x)./(4-sum(isnan(x)));
 [H] = nanmean(x);
 
