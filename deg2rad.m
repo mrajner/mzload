@@ -1,6 +1,6 @@
 function [y] = deg2rad(x)
 %
-% Function deg2rad convert degree angle to radians
+% Function deg2rad converts degree angle to radians
 %   
 % x     input angle, enter as decimal degrees
 %
@@ -9,3 +9,4 @@ function [y] = deg2rad(x)
 y = x * pi / 180;
 
 end
+

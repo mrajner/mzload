@@ -1,7 +1,7 @@
 function [ Area, H_hydro, dist ] = trapezoid( fi0, la0, Az1, Az2, s1, s2, a, e2, Hydro_model )
 %
 % trapezoid function is used to calculate properties of one spherical trapezoid
-% that influences hydrospheric loading
+% that influences hydrosphere loading
 %
 % fi0, la0      latitude and longitude of point for which deformation are calculated,
 %               input as decimal degrees
@@ -22,7 +22,7 @@ function [ Area, H_hydro, dist ] = trapezoid( fi0, la0, Az1, Az2, s1, s2, a, e2,
 % Area          area of spherical trapezoid, expressed as square metres
 %
 % H_hydro       average height of water column at spherical trapezoid,
-%               expressed as milimetres
+%               expressed as millimetres
 %
 % dist          distance to centre of spherical figure
 %
@@ -32,14 +32,14 @@ function [ Area, H_hydro, dist ] = trapezoid( fi0, la0, Az1, Az2, s1, s2, a, e2,
 % width of spherical trapezoid
 A = Az2-Az1;
 
-% calculate coordinates of spherical trapezoid's verticles
+% calculate coordinates of spherical trapezoid's vertices
 [fi1, la1] = directVincenty(fi0, la0, Az1, s1, a, e2);
 [fi2, la2] = directVincenty(fi0, la0, Az2, s1, a, e2);
 [fi3, la3] = directVincenty(fi0, la0, Az1, s2, a, e2);
 [fi4, la4] = directVincenty(fi0, la0, Az2, s2, a, e2);
 
-% calculate spherical zone (pherical segment) height between
-% parallel planes, cointaining spherical trapezoid vericles,
+% calculate spherical zone (spherical segment) height between
+% parallel planes, containing spherical trapezoid vertices,
 % perpendicular to sphere's rotation axis
 
 [fi5, la5] = directVincenty(90, 0, 0, s1, a, e2);

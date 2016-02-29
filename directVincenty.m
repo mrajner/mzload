@@ -1,6 +1,6 @@
 function [ fi2, la2, a12, a21 ] = directVincenty( fi1, la1, alpha12, s12, a, e2)
 %
-% directVincenty function calculates coordinates of the geodesic's end point
+% directVincenty function calculates coordinates of the geodesics end point
 % (fi2, la2) based on start point (fi1, la1), geodesic distance (s12) and 
 % initial azimuth (alpha12)
 %
@@ -10,8 +10,6 @@ function [ fi2, la2, a12, a21 ] = directVincenty( fi1, la1, alpha12, s12, a, e2)
 %               (determined in start point), input as decimal degrees
 %   s12         geodesic length, input as metres
 %
-%   The function returns decimal degree
-%
 %   fi2         end point's latitude, output as decimal degrees
 %   la2         end point's longitude, output as decimal degrees
 %   alpha12     azimuth from start to end point, determined at the location 
@@ -19,8 +17,8 @@ function [ fi2, la2, a12, a21 ] = directVincenty( fi1, la1, alpha12, s12, a, e2)
 %   alpha21     azimuth from end point to start point, determined at the location
 %               of end point, output as decimal degrees 
 %
-% Presented algorithm is based on direct Vincenty method, to calculate 
-% geodesic's end point for ellipsoid of revolution and was altered to
+% Presented algorithm is based on direct Vincenty's formulae, to calculate 
+% geodesics end point for reference surface and was altered to
 % improve calculation speed for spherical Earth
 
 %% convert decimal degrees input to radians
@@ -29,9 +27,9 @@ fi1 = deg2rad(fi1);
 la1 = deg2rad(la1);
 a12 = deg2rad(alpha12);
 
-%% direct Vinceny method
+%% direct Vinceny's formulae
 
-% azimuth of geodesic's intersecting the equator
+% azimuth of geodesics intersecting the equator
 
 alpha = asin(cos(fi1)*sin(a12));
 sigma = s12./a;

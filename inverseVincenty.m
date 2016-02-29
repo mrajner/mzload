@@ -1,6 +1,6 @@
 function [ s12, alpha12, alpha21 ] = inverseVincenty( fi1, la1, fi2, la2, a, e2 )
 %
-% inverseVincenty function is used to calculate geodesic distance s12 between two
+% inverseVincenty function is used to calculate geodesics distance s12 between two
 % points (fi1, fi1 and fi2, la2) on given reference surface (a, e2) as well
 % as azimuth of this geodesic
 %
@@ -32,7 +32,7 @@ la2 = deg2rad(la2);
 if fi1 == fi2 && la1 == la2
     fprintf('Start point and end point are the same\n')
 else
-%% inverse Vincenty algorithm
+%% inverse Vincenty's formulae
 
 % latitude reduced to sphere
 U1 = atan((1-f)*tan(fi1));
@@ -41,9 +41,9 @@ U2 = atan((1-f)*tan(fi2));
 la = la2 - la1;
 L = la;
 
-for k=1:25
-	k
-	L
+for k=1:5
+	%k
+	%L
 	
     ssigma = sqrt((cos(U2).*sin(la)).^2+(cos(U1).*sin(U2)-sin(U1).*cos(U2).*cos(la)).^2);
     csigma = sin(U1).*sin(U2)+cos(U1).*cos(U2).*cos(la);
@@ -54,10 +54,10 @@ for k=1:25
     dwasigmam = acos(csigma-2.*sin(U1).*sin(U2)./((cos(alpha)).^2));
 
     C = f./16.*((cos(alpha)).^2).*(4+f.*(4-3.*((cos(alpha)).^2)));
-    la = L+(1-C).*f.*sin(alpha).*(sigma+C.*sin(sigma).*(cos(dwasigmam)+C.*cos(sigma).*(-1+2.*((cos(dwasigmam)).^2))))
+    la = L+(1-C).*f.*sin(alpha).*(sigma+C.*sin(sigma).*(cos(dwasigmam)+C.*cos(sigma).*(-1+2.*((cos(dwasigmam)).^2))));
 	
 	
-	fprintf('dL = %1.16f \n', L-la);
+	%fprintf('dL = %1.16f \n', L-la);
 end
 
 
