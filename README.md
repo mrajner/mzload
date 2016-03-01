@@ -47,13 +47,16 @@ File `months.m` is a script that starts calculation of deformations
 for all epochs in WGHM.mat file for specified coordinates.
 
 Results are stored in txt file as:
-fi la n e u
+`fi` `la` `n` `e` `u`
 where:
-fi - point's latitude (decimal degrees)
-la - point's longitude (decimal degrees)
-n - deformations in direction of meridian (millimetres)
-e - deformations in direction of prime vertical (millimetres)
-u - deformations in direction of plumb line (millimetres)
+
+| symbol | meaning
+| ----   | ----
+| `fi`   | point's latitude (decimal degrees)
+| `la`   | point's longitude (decimal degrees)
+| `n`    | deformations in direction of meridian (millimetres)
+| `e`    | deformations in direction of prime vertical (millimetres)
+| `u`    | deformations in direction of plumb line (millimetres)
 
 
 # Contact author
