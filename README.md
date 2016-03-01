@@ -1,11 +1,8 @@
-Application  
----
-
-Application was created to determine the deformation of the Earth’s crust, 
-as a response to the surface loading caused by continental waters.
+# Application
+Application was created to determine the deformation of the Earth’s crust, as 
+a response to the surface loading caused by continental waters.
 Presented algorithm uses spherical Earth as a reference surface to 
 calculate deformations.
-
 
 # Preparation
 Presented algorithm heavily use NaN values for hydrosphere data cells that
@@ -14,10 +11,12 @@ has no determined water quantity and `nanmean` function that is part of
 It may be also necessary to install `io package` from Octave Forge.
 
 To install package, execute following command in Octave prompt:
-pkg install statistics
 
-To load package into `Octave`, execute following command in application prompt. 
-pkg load statistics 
+    pkg install statistics
+
+To load package into `Octave`, execute following command in application prompt:
+
+    pkg load statistics 
 
 Presented algorithm requires creating two files with necessary data:
 
@@ -28,17 +27,19 @@ the Earth model ’A’, developed jointly by Gutenberg and Bullen
 
 It is important to name that file `grn1.mat`. Octave users can create such
 file with following commands executed from application's command prompt:
-load grn1.txt;
-save(`-mat7-binary`,`grn1.mat`,`grn1`);
+
+    load grn1.txt;
+    save(-mat7-binary,grn1.mat,grn1);
 
 - containing hydrosphere data, stored in e.g. file `WGHM.txt`.
 
 This file should contain hydrosphere data in a grid with spacing of 0.5 degrees.
 Octave users can create such file with following command executed from
-application's command prompt, given that source data is stored in WGHM.txt file.
-load WGHM.txt;
-WGHM(WGHM==-9999) = NaN;
-save(`-mat7-binary`,`WGHM.mat`,`WGHM`);
+application's command prompt, given that source data is stored in `WGHM.txt` 
+file.
+
+    load WGHM.txt; WGHM(WGHM==-9999) = NaN;
+    save(-mat7-binary, WGHM.mat, WGHM);
 
 
 # Calculations
