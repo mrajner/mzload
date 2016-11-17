@@ -24,4 +24,3 @@ Y = ((N+h).*cos(fi).*sin(la));
 Z = (((N.*(1-e2))+h).*sin(fi));
 
 end
-

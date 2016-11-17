@@ -121,7 +121,7 @@ else
         fig_area(end,:) = Area;
         fig_hydro(end,:) = H_hydro;
         fig_mdistance(end,:) = dist;
-                
+
     end
 
 % loading calculation, depending on spherical distance
