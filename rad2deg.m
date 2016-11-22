@@ -9,4 +9,3 @@ function [ y ] = rad2deg( x )
 y = x / pi * 180;
 
 end
-
