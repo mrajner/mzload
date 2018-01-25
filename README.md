@@ -27,7 +27,7 @@ Presented algorithm requires creating two files with necessary data:
 - containing Greens functions coefficient, that are stored in file `grn1.txt`.
 For purpose of this study, Greens functions coefficient were taken for
 the Earth model ’A’, developed jointly by Gutenberg and Bullen 
-(Farrell, 1972. Deformation of the earth by surface loads).  
+(Farrell, 1972. Deformation of the earth by surface loads). 
 It is important to name that file `grn1.mat`. Octave users can create such
 file with following commands executed from application's command prompt:
 
@@ -36,7 +36,7 @@ load grn1.txt;
 save(-mat7-binary,grn1.mat,grn1);
 ````
 
-- containing hydrosphere data, stored in e.g. file `WGHM.txt`.  
+- containing hydrosphere data, stored in e.g. file `WGHM.txt`. 
 This file should contain hydrosphere data in a grid with spacing of 0.5 degrees.
 Octave users can create such file with following command executed from
 application's command prompt, given that source data is stored in `WGHM.txt` 
@@ -46,7 +46,6 @@ file.
 load WGHM.txt; WGHM(WGHM==-9999) = NaN;
 save(-mat7-binary, WGHM.mat, WGHM);
 ````
-
 
 # Calculations
 File `months.m` is a script that starts calculation of deformations
@@ -63,7 +62,6 @@ where:
 | `n`    | deformations in direction of meridian (millimetres)
 | `e`    | deformations in direction of prime vertical (millimetres)
 | `u`    | deformations in direction of plumb line (millimetres)
-
 
 # Contact author
 In case of any questions related to used algorithm or obtained results, 
