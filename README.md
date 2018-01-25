@@ -1,6 +1,6 @@
 # Application
 Application was created to determine the deformation of the Earth’s crust, as 
-a response to the surface loading caused by continental waters.
+a response to the surface loading caused by continental water.
 Presented algorithm uses spherical Earth as a reference surface to 
 calculate deformations.
 
