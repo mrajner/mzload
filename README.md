@@ -31,10 +31,10 @@ the Earth model ’A’, developed jointly by Gutenberg and Bullen
 It is important to name that file `grn1.mat`. Octave users can create such
 file with following commands executed from application's command prompt:
 
-    ````matlab
+````matlab
 load grn1.txt;
 save(-mat7-binary,grn1.mat,grn1);
-    ````
+````
 
 - containing hydrosphere data, stored in e.g. file `WGHM.txt`.  
 This file should contain hydrosphere data in a grid with spacing of 0.5 degrees.
@@ -42,10 +42,10 @@ Octave users can create such file with following command executed from
 application's command prompt, given that source data is stored in `WGHM.txt` 
 file.
 
-    ````matlab
+````matlab
 load WGHM.txt; WGHM(WGHM==-9999) = NaN;
 save(-mat7-binary, WGHM.mat, WGHM);
-    ````
+````
 
 
 # Calculations
