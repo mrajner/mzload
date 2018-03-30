@@ -16,7 +16,7 @@ function [ n, e, u ] = Earth_deformation( fi0, la0, green_fun, Hydrology_model )
 %                   earth's radius is done at runtime).
 %                   Green's function coefficients for distances between the
 %                   distances in the first column of the table are calculated
-%                   with third degree spline.
+%                   with third degree spline
 %                   
 % Hydrology_model   hydrological data with spatial resolution of
 %                   0.5 degree (one month includes 360 rows and 720 columns)
